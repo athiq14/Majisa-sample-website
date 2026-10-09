@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { ChevronDown, Volume2, VolumeX, ShieldCheck, Compass } from 'lucide-react';
+import { ChevronDown, Volume2, VolumeX, Sparkles, ShieldCheck, Compass } from 'lucide-react';
 
 export const HeroVideo: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
