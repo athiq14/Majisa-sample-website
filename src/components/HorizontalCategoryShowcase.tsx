@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
-import { Compass, Sparkles, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Compass, Sparkles, ArrowRight } from 'lucide-react';
 import { categories } from '../data/categories';
 import type { Category } from '../types';
 
@@ -113,7 +113,6 @@ const SphericalCategoryCard: React.FC<{
 export const HorizontalCategoryShowcase: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isTablet, setIsTablet] = useState(false);
-  const [activeMobileIndex, setActiveMobileIndex] = useState(0);
   
   useEffect(() => {
     const handleResize = () => {
