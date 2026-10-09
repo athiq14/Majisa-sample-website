@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Architectural Light Palette */
+    --color-bg: #faf8f5;
+    --color-surface: #ffffff;
+    --color-surface-subtle: #f4efe6;
+    --color-text-main: #282726;
+    --color-text-muted: #6e6a63;
+    --color-accent: #8c5a3c;
+    --color-gold: #c5a059;
+    --color-border: #e8e3d8;
+  }
+
+  html, body {
+    background-color: #faf8f5;
+    color: #282726;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Fluid Heading Utilities */
+.fluid-h1 {
+  font-size: clamp(2.25rem, 5vw + 1rem, 5rem);
+  line-height: 1.08;
+}
+
+.fluid-h2 {
+  font-size: clamp(1.75rem, 3.5vw + 0.5rem, 3.5rem);
+  line-height: 1.15;
+}
+
+/* Touch Target Helper */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4efe6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8d2c4;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8c5a3c;
+}
+
+/* Cards & Utilities */
+.arch-card {
+  background-color: #ffffff;
+  border: 1px solid #e8e3d8;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arch-card:hover {
+  border-color: #8c5a3c;
+  box-shadow: 0 16px 36px -12px rgba(40, 39, 38, 0.08);
+}
+
+.wood-text-gradient {
+  background: linear-gradient(135deg, #7a4b2a 0%, #8c5a3c 50%, #5c381e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
